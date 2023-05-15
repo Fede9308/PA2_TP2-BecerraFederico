@@ -2,7 +2,7 @@
 
 namespace PA2_TP2_Federico_Becerra
 {
-    public class Paquete
+    internal class Paquete
     {
         public int Codigo { get; set; }
         public string Nombre { get; set; }
@@ -10,28 +10,31 @@ namespace PA2_TP2_Federico_Becerra
         public int TotalNoches { get; set; }
         public string CondicionComercial { get; set; }
 
-        public IList<Ciudad> CiudadList { get; }
+        public PrecioBase PrecioBase { get; set; }
 
-        public Paquete()
+        public IList<Servicio> ServicioList { get; set; }
+
+        public IList<Ciudad> CiudadList { get; set; }
+
+        public Paquete(int codigo, string nombre, int totalDias, int totalNoches, string condicionComercial, PrecioBase preciobase, List<Ciudad> ciudadList1)
         {
-            CiudadList = new List<Ciudad>();
-        }
-        public Paquete(int codigo, string nombre, int totalDias, int totalNoches, string condicionComercial)
-        {
+            PrecioBase = preciobase;
             Codigo = codigo;
             Nombre = nombre;
             TotalDias = totalDias;
             TotalNoches = totalNoches;
             CondicionComercial = condicionComercial;
-            CiudadList = new List<Ciudad>();
+            CiudadList = ciudadList1;
+            ServicioList = new List<Servicio>();
         }
 
-        public void AgregarCiudad(Ciudad ciudad)
+        public void AgregarServicio(Servicio servicio)
         {
-            if (ciudad != null && !CiudadList.Contains(ciudad))
+            if (servicio != null && !ServicioList.Contains(servicio))
             {
-                CiudadList.Add(ciudad);
+                ServicioList.Add(servicio);
             }
         }
+
     }
 }

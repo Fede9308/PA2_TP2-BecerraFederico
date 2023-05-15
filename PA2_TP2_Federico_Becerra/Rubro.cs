@@ -8,5 +8,13 @@ namespace PA2_TP2_Federico_Becerra
 {
     internal class Rubro
     {
+        public int Codigo { get; set; }
+        public string Nombre { get; set; }
+
+        public Rubro(int codigo, string nombre)
+        {
+            Codigo = codigo;
+            Nombre = nombre;
+        }
     }
 }

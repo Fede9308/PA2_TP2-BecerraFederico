@@ -8,5 +8,14 @@ namespace PA2_TP2_Federico_Becerra
 {
     internal class Ciudad
     {
+        public int Codigo { get; set; }
+        public string Nombre { get; set; }
+
+
+        public Ciudad(int codigo, string nombre)
+        {
+            Codigo = codigo;
+            Nombre = nombre;
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace PA2_TP2_Federico_Becerra
     {
         static void Main(string[] args)
         {
-            Paquete paquete1 = new Paquete();
+           
         }
     }
 }
