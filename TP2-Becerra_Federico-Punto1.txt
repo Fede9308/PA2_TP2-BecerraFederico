@@ -1,0 +1,82 @@
+Alumno: Becerra Federico
+
+Trabajo Practico 2 de Programción Aplicada
+1)
+
+public class Animal
+{
+   public string Especie { get; set; }
+   public int CantidadDePatas { get; set; }
+   public double Peso { get; set; }
+    public Animal()
+    {
+    }
+    public Animal(string especie, int cantidadDePatas, double peso)
+    {
+        Especie = especie;
+        CantidadDePatas = cantidadDePatas;
+        Peso = peso;
+    }
+    public Animal(string especie)
+    {
+        Especie = especie;
+    }
+    public void AsignarEspecie(string especie)
+    {
+        Especie = especie;
+    }
+    public void AsignarCantidadDePatas(int patas)
+    {
+        CantidadDePatas = patas;
+    }
+    public void AsignarPeso(double peso)
+    {
+        Peso = peso;
+    }
+}
+
+---------------------------------------------------------------------------
+
+public class Factura
+{
+   public int Fecha { get; set; }  
+   public double Importe { get; set; }
+   public int NumeroFactura { get; set; }
+
+   public int CantidadItems { get; set; }
+
+    public Factura() { }
+
+    public Factura(int fecha, double importe, int numeroFactura, int cantidadItems)
+    {
+        Fecha = fecha;
+        Importe = importe;
+        NumeroFactura = numeroFactura;
+        CantidadItems = cantidadItems;
+    }
+    public Factura(int fecha, double importe){
+        Fecha = fecha;
+        Importe = importe;
+    }
+
+    public void AsignarNumeroFactura (int numero)
+    {
+        NumeroFactura = numero; 
+    }
+    public void AsignarImporte(double importe)
+    {
+        Importe = importe;  
+    }
+
+    public int MostrarNumeroFactura()
+    {
+        return NumeroFactura;
+    }
+
+    public double MostrarImporte()
+    {
+        return Importe;
+    }
+
+
+}
